@@ -1,0 +1,3 @@
+[submodule "AgentSociety"]
+	path = AgentSociety
+	url = git@github.com:tsinghua-fib-lab/AgentSociety.git

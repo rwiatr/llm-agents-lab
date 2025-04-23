@@ -1,0 +1,42 @@
+{
+    "name": "Databricks",
+    "remoteUser": "vscode",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "runArgs": ["--network", "host"],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "hashicorp.terraform",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.black-formatter",
+                "tamasfe.even-better-toml",
+                "redhat.vscode-yaml",
+                "dvirtz.parquet-viewer",
+                "hashicorp.terraform",
+                "ms-vscode.makefile-tools",
+                "shuworks.vscode-table-formatter"
+            ],
+            "settings": {
+                "files.trimTrailingWhitespace": true,
+                "files.trimFinalNewlines": true,
+                "files.insertFinalNewline": true,
+                "python.testing.unittestEnabled": false,
+                "python.testing.pytestEnabled": true,
+                "python.testing.pytestArgs": [
+                    "src"
+                ],
+                "python.languageServer": "Pylance",
+                "python.venvPath": "/home/vscode/.cache/pypoetry/virtualenvs",
+                "python.terminal.activateEnvironment": false,
+                "[python]": {
+                    "black-formatter.importStrategy": "fromEnvironment",
+                    "editor.defaultFormatter": "ms-python.black-formatter"
+                }
+            }
+        }
+    }
+}
